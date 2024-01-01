@@ -13,7 +13,5 @@ document
   });
 
 function generateLink(name) {
-  // You can customize the link format as needed
-  // return "https://" + name + ".aliza.vercel.app/";
   return "https://domain-test-kappa.vercel.app/" + name;
 }
