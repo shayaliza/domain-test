@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/:name", "destination": "/api/dynamicPath?name=:name" }
+    { "source": "/:name", "destination": "/api/dynamicPath" }
   ]
 }
