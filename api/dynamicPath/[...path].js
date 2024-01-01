@@ -1,6 +1,6 @@
 // api/dynamicPath/[...path].js
 module.exports = (req, res) => {
-  const { name } = req.params;
+  const { name } = req.query;
   const fullPath = req.url; // Get the full path URL
   res.setHeader("Content-Type", "text/html");
 
