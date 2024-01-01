@@ -6,8 +6,8 @@ module.exports = (req, res) => {
   let greeting = "there";
 
   if (Array.isArray(path)) {
-    // Join the array elements with '/'
-    greeting = path.join("/");
+    // Use the last element of the array as the greeting
+    greeting = path[path.length - 1];
   }
 
   res.status(200).send(`<!DOCTYPE html>
