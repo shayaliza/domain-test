@@ -26,11 +26,12 @@
 // api/dynamicPath/[...path].js
 // api/dynamicPath/[...path].js
 // api/dynamicPath/[...path].js
+// api/dynamicPath/[...path].js
 module.exports = (req, res) => {
   try {
     const { name } = req.params;
     const fullPath = req.url; // Get the full path URL
-    res.setHeader("Content-Type", "text/html");
+    console.log("Request received:", req);
 
     let greeting = "there";
 
