@@ -2,6 +2,14 @@
 module.exports = (req, res) => {
   const { path } = req.query;
   res.setHeader("Content-Type", "text/html");
+
+  let greeting = "there";
+
+  if (Array.isArray(path)) {
+    // Join the array elements with '/'
+    greeting = path.join("/");
+  }
+
   res.status(200).send(`<!DOCTYPE html>
     <html lang="en">
       <head>
@@ -10,7 +18,7 @@ module.exports = (req, res) => {
         <title>Greetings</title>
       </head>
       <body>
-        <h1>Hi ${path.join("/") || "there"}!</h1>
+        <h1>Hi ${greeting}!</h1>
       </body>
     </html>`);
 };
